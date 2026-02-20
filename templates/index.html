@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroNiti Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Inter', sans-serif; }
+        .sidebar { background-color: #002147; min-height: 100vh; }
+        .nav-btn { display: block; padding: 12px 16px; margin-bottom: 8px; border-radius: 8px; color: #9ca3af; cursor: pointer; transition: all 0.2s; }
+        .nav-btn:hover { background-color: #1e3a8a; color: white; }
+        .nav-active { background-color: #1e40af; color: white; font-weight: bold; }
+        .tab-content { display: none; }
+        .tab-active { display: block; }
+    </style>
+</head>
+<body class="flex">
+
+    <div class="sidebar w-64 text-white flex flex-col pt-8 flex-shrink-0 shadow-lg z-10">
+        <h1 class="text-2xl font-bold px-6 mb-8 flex items-center gap-2">✈️ AeroNiti Pro</h1>
+        <nav class="flex flex-col px-4">
+            <a onclick="switchTab('viability', this)" class="nav-btn nav-active" id="nav-viability">🚨 Viability Simulator</a>
+            <a onclick="switchTab('resilience', this)" class="nav-btn" id="nav-resilience">🛡️ Resilience Stress-Test</a>
+            <a onclick="switchTab('expansion', this)" class="nav-btn" id="nav-expansion">🚀 Expansion Scout</a>
+            <a onclick="switchTab('yatra', this)" class="nav-btn" id="nav-yatra">🛕 Yatra Connect</a>
+        </nav>
+    </div>
+
+    <div class="flex-1 p-10 h-screen overflow-y-auto">
+        <div class="max-w-6xl mx-auto">
+            
+            <div id="viability" class="tab-content tab-active">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 tracking-tight">🚨 Viability Simulator</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm mb-6 border border-gray-200">
+                    <label class="block text-sm font-semibold text-gray-600 mb-2">Viability Threshold (Pax): <span id="v-thresh-val" class="text-blue-600">5000</span></label>
+                    <input type="range" id="v-thresh" min="1000" max="50000" value="5000" class="w-full mb-6 accent-blue-600" oninput="document.getElementById('v-thresh-val').innerText=this.value; loadViability();">
+                    
+                    <label class="block text-sm font-semibold text-gray-600 mb-2">Subsidy Boost (%): <span id="v-boost-val" class="text-blue-600">0</span></label>
+                    <input type="range" id="v-boost" min="0" max="100" value="0" class="w-full accent-blue-600" oninput="document.getElementById('v-boost-val').innerText=this.value; loadViability();">
+                </div>
+                <div id="v-insight" class="border-l-4 p-4 mb-6 rounded shadow-sm text-sm bg-gray-50 border-gray-300">Loading...</div>
+                <div class="grid grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-600 text-center">
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">Viable Airports</p>
+                        <p id="v-viable" class="text-4xl font-black text-blue-900">-</p>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-red-500 text-center">
+                        <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">Critical Airports</p>
+                        <p id="v-critical" class="text-4xl font-black text-red-700">-</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-2"><div id="v-chart" class="w-full h-[400px]"></div></div>
+            </div>
+
+            <div id="resilience" class="tab-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 tracking-tight">🛡️ Resilience Stress-Test</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm mb-6 border border-gray-200">
+                    <label class="block text-sm font-semibold text-gray-600 mb-2">Select Scenario</label>
+                    <select id="r-scenario" class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50" onchange="loadResilience()">
+                        <option>Baseline</option><option>Recession (-30% Biz)</option><option>Pandemic (-60% All)</option>
+                    </select>
+                </div>
+                <div id="r-insight" class="border-l-4 p-4 mb-6 rounded shadow-sm text-sm bg-gray-50 border-gray-300">Loading...</div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-2"><div id="r-chart" class="w-full h-[450px]"></div></div>
+            </div>
+
+            <div id="expansion" class="tab-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 tracking-tight">🚀 Expansion Scout</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm mb-6 border border-gray-200">
+                    <label class="block text-sm font-semibold text-gray-600 mb-2">Weight: Wealth (Purchasing Power): <span id="e-weight-val" class="text-blue-600">0.7</span></label>
+                    <input type="range" id="e-weight" min="0" max="1" step="0.1" value="0.7" class="w-full accent-blue-600" oninput="document.getElementById('e-weight-val').innerText=this.value; loadExpansion();">
+                </div>
+                <div id="e-insight" class="border-l-4 p-4 mb-6 rounded shadow-sm text-sm bg-blue-50 border-blue-500">Loading...</div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden mb-6"><div id="e-map" class="w-full h-[400px]"></div></div>
+                <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
+                    <h3 class="font-bold text-gray-800 mb-4 uppercase text-sm tracking-widest border-b pb-2">Top 5 Hitlist</h3>
+                    <div id="e-table" class="overflow-x-auto text-sm"></div>
+                </div>
+            </div>
+
+            <div id="yatra" class="tab-content">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 tracking-tight">🛕 Yatra Connect</h2>
+                
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-6 border border-gray-200">
+                    <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4 border-b pb-2">📊 Network Health Insights</p>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div><p class="text-xs text-gray-400">Total Airports</p><p class="text-2xl font-bold text-gray-800">{{ total }}</p></div>
+                        <div><p class="text-xs text-gray-400">Critical Nodes <span title="Airports needing support" class="cursor-pointer">❔</span></p><p class="text-2xl font-bold text-gray-800">{{ critical }}</p></div>
+                        <div><p class="text-xs text-gray-400">Pilgrimage Anchors <span title="Stable revenue generators" class="cursor-pointer">❔</span></p><p class="text-2xl font-bold text-gray-800">{{ pilgrim }}</p></div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-6 border border-gray-100 bg-gray-50">
+                    <div class="grid grid-cols-3 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">Base Hub</label>
+                            <select id="hub" class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-blue-500 shadow-sm bg-white">
+                                {% for h in hubs %}<option value="{{ h }}">{{ h }}</option>{% endfor %}
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">Pilgrimage Site</label>
+                            <select id="pilgrimage" class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-blue-500 shadow-sm bg-white">
+                                {% for p in pilgrimages %}<option value="{{ p }}">{{ p }}</option>{% endfor %}
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">Fleet Assignment</label>
+                            <select id="plane" class="w-full border border-gray-300 rounded-lg p-3 outline-none focus:ring-2 focus:ring-blue-500 shadow-sm bg-white">
+                                <option value="ATR-72 (Regional)">ATR-72 (Regional)</option>
+                                <option value="Airbus A320 (Mainline)">Airbus A320 (Mainline)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-start">
+                        <button onclick="analyzeCircuit()" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                            Analyze Circuit
+                        </button>
+                    </div>
+                </div>
+
+                <div id="results" class="hidden">
+                    <div id="y-insight" class="border-l-4 p-4 mb-6 rounded shadow-sm text-sm"></div>
+                    <div class="bg-white rounded-xl shadow-md p-6 border-l-8 border-blue-600 flex justify-between items-center mb-6">
+                        <div><p class="text-xs text-gray-400 font-bold tracking-widest uppercase mb-1">OPTIMIZED CIRCUIT</p><h3 id="circuit-path" class="text-xl font-bold text-blue-900"></h3></div>
+                        <div class="text-right"><h2 id="ticket-price" class="text-3xl font-black text-blue-600"></h2><p class="text-xs text-gray-400 font-bold uppercase mt-1">Break-even / Pax</p></div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4 mb-6">
+                        <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-400 text-center"><p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">Distance</p><p id="total-dist" class="text-2xl font-bold text-gray-800"></p></div>
+                        <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-400 text-center"><p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">Flight Time</p><p id="flight-time" class="text-2xl font-bold text-gray-800"></p></div>
+                        <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-400 text-center"><p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">Fuel Burn</p><p id="fuel-burn" class="text-2xl font-bold text-gray-800"></p></div>
+                        <div class="bg-white rounded-xl shadow-sm p-5 border-l-4 border-blue-400 text-center"><p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-2">CO2 Impact</p><p id="co2-impact" class="text-2xl font-bold text-gray-800"></p></div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"><div id="y-map" class="w-full h-[500px]"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId, btnElement) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('tab-active'));
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('nav-active'));
+            document.getElementById(tabId).classList.add('tab-active');
+            btnElement.classList.add('nav-active');
+
+            if (tabId === 'viability') loadViability();
+            if (tabId === 'resilience') loadResilience();
+            if (tabId === 'expansion') loadExpansion();
+
+            setTimeout(() => { window.dispatchEvent(new Event('resize')); }, 100);
+        }
+
+        function loadViability() {
+            fetch('/api/viability', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ threshold: document.getElementById('v-thresh').value, boost: document.getElementById('v-boost').value })
+            }).then(r => r.json()).then(data => {
+                document.getElementById('v-viable').innerText = data.viable;
+                document.getElementById('v-critical').innerText = data.critical;
+                document.getElementById('v-insight').innerHTML = data.insight;
+                document.getElementById('v-insight').className = `border-l-4 p-4 mb-6 rounded shadow-sm text-sm ${data.color}`;
+                let mapData = JSON.parse(data.chart);
+                Plotly.newPlot('v-chart', mapData.data, mapData.layout, {responsive: true});
+            });
+        }
+
+        function loadResilience() {
+            fetch('/api/resilience', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ scenario: document.getElementById('r-scenario').value })
+            }).then(r => r.json()).then(data => {
+                document.getElementById('r-insight').innerHTML = data.insight;
+                document.getElementById('r-insight').className = `border-l-4 p-4 mb-6 rounded shadow-sm text-sm ${data.color}`;
+                let mapData = JSON.parse(data.chart);
+                Plotly.newPlot('r-chart', mapData.data, mapData.layout, {responsive: true});
+            });
+        }
+
+        function loadExpansion() {
+            fetch('/api/expansion', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ weight: document.getElementById('e-weight').value })
+            }).then(r => r.json()).then(data => {
+                document.getElementById('e-insight').innerHTML = data.insight;
+                document.getElementById('e-table').innerHTML = data.table;
+                
+                document.querySelectorAll('#e-table table').forEach(t => t.classList.add('w-full', 'text-left', 'whitespace-nowrap'));
+                document.querySelectorAll('#e-table thead tr').forEach(tr => tr.classList.add('text-xs', 'text-gray-500', 'uppercase', 'tracking-wider', 'bg-gray-50'));
+                
+                document.querySelectorAll('#e-table th').forEach(th => {
+                    th.removeAttribute('style'); 
+                    th.classList.add('p-4', 'border-b', 'font-semibold', 'text-left');
+                });
+                document.querySelectorAll('#e-table td').forEach(td => {
+                    td.removeAttribute('style');
+                    td.classList.add('p-4', 'border-b', 'text-gray-800', 'text-left');
+                });
+                
+                document.querySelectorAll('#e-table tbody tr').forEach(tr => tr.classList.add('hover:bg-blue-50', 'transition-colors', 'duration-200'));
+                
+                document.querySelectorAll('#e-table tr').forEach(tr => {
+                    if(tr.children.length >= 4) {
+                        tr.children[2].classList.remove('text-left');
+                        tr.children[2].classList.add('text-right');
+                        tr.children[3].classList.remove('text-left');
+                        tr.children[3].classList.add('text-right', 'font-bold', 'text-blue-700');
+                    }
+                });
+
+                let mapData = JSON.parse(data.map_data);
+                Plotly.newPlot('e-map', mapData.data, mapData.layout, {responsive: true});
+            });
+        }
+
+        function analyzeCircuit() {
+            fetch('/api/analyze_circuit', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ hub: document.getElementById('hub').value, pilgrimage: document.getElementById('pilgrimage').value, plane: document.getElementById('plane').value })
+            }).then(r => r.json()).then(data => {
+                document.getElementById('results').classList.remove('hidden');
+                document.getElementById('y-insight').className = `border-l-4 p-4 mb-6 rounded shadow-sm text-sm ${data.color}`;
+                document.getElementById('y-insight').innerHTML = data.insight;
+                document.getElementById('circuit-path').innerHTML = data.circuit_html;
+                document.getElementById('ticket-price').innerText = "₹ " + data.price.toLocaleString();
+                document.getElementById('total-dist').innerText = data.distance + " km";
+                document.getElementById('flight-time').innerText = data.time + " hrs";
+                document.getElementById('fuel-burn').innerText = data.fuel.toLocaleString() + " kg";
+                document.getElementById('co2-impact').innerText = data.co2.toLocaleString() + " kg";
+                
+                let mapData = JSON.parse(data.map_data);
+                Plotly.newPlot('y-map', mapData.data, mapData.layout, {responsive: true});
+                window.dispatchEvent(new Event('resize'));
+            });
+        }
+
+        window.onload = loadViability;
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+Area served,Airport name,IATA,ICAO,Airport type,Operational,Owned/operated by,State,Scheme Covered,Latitude,Longitude,Demand Type,Airport Category,2022,2023,2024,2025,Per Capita Income
+Port Blair,Veer Savarkar International Airport,IXZ,VOPB,International (CE),Yes,MoD and AAI,Andaman and Nicobar Islands,Krishi-Udan,11.640194,92.72902, Leisure,Mini Hub,761610.0,1273138.0,1453811.0,1656704.0,0.0
+Kadapa,Kadapa Airport,CDP,VOCP,Domestic,Yes,AAI,Andhra Pradesh,RCS-UDAN,14.513154,78.769183,,,12855.0,70126.0,65544.0,52745.0,266240.0
+Kurnool,Uyyalawada Narasimha Reddy Airport,KJB,VOKU,Domestic,Yes,State Government,Andhra Pradesh,RCS-UDAN,15.716288,78.16923,,,31535.0,38622.0,39746.0,19427.0,266240.0
+Rajahmundry,Rajahmundry Airport,RJA,VORY,Domestic,Yes,AAI,Andhra Pradesh,,17.105799,81.813204,,,275601.0,432804.0,424813.0,489114.0,266240.0
+Tirupati,Tirupati Airport,TIR,VOTP,Domestic,Yes,AAI,Andhra Pradesh,,13.631988,79.539869, Pilgrimage,Mini Hub,623341.0,919267.0,870662.0,995640.0,266240.0
+Vijayawada,Vijayawada International Airport,VGA,VOBZ,International,Yes,AAI,Andhra Pradesh,,16.530011,80.804888, Industrial,Mini Hub,625131.0,966383.0,1062506.0,1388943.0,266240.0
+Visakhapatnam,Visakhapatnam International Airport,VTZ,VOVZ,Customs,Yes,MoD and AAI,Andhra Pradesh,Krishi-Udan,17.723506,83.227729,,,1610483.0,2500654.0,2788665.0,2955089.0,266240.0
+Itanagar,Donyi Polo Airport,HGI,VEHO,Domestic,Yes,AAI,Arunachal Pradesh,RCS-UDAN,26.96683,93.638792,,,0.0,35538.0,147790.0,170296.0,246813.0
+Pasighat,Pasighat Airport,IXT,VEPG,State/Private,Yes,State Government,Arunachal Pradesh,RCS-UDAN,28.064786,95.336952,,,5814.0,9920.0,8211.0,8456.0,246813.0
+Tezu,Tezu Airport,TEI,VETJ,Domestic,Yes,AAI,Arunachal Pradesh,RCS-UDAN & Krishi-Udan,27.9412002563,96.1343994141,,,6770.0,16517.0,12048.0,9239.0,246813.0
+Ziro,Ziro Airport,ZER,VEZO,State/Private,Yes,AAI,Arunachal Pradesh,,27.588301,93.828102,,,0.0,181.0,299.0,468.0,246813.0
+Dibrugarh,Dibrugarh Airport,DIB,VEMN,Domestic,Yes,AAI,Assam,Krishi-Udan,27.4839000702,95.0168991089, Industrial,Mini Hub,525925.0,675304.0,745876.0,822437.0,159185.0
+Guwahati,Lokpriya Gopinath Bordoloi International Airport,GAU,VEGT,International,Yes,Adani Group,Assam,,26.106654,91.585226,,,3148956.0,5051480.0,5957609.0,6160157.0,159185.0
+Jorhat,Jorhat Airport,JRH,VEJT,Domestic (CE),Yes,MoD and AAI,Assam,RCS-UDAN & Krishi-Udan,26.730456,94.175416,,,75172.0,151617.0,168468.0,130754.0,159185.0
+North Lakhimpur,Lilabari Airport,IXI,VELR,Domestic,Yes,AAI,Assam,RCS-UDAN & Krishi-Udan,27.295682,94.097266,,,27486.0,30417.0,36172.0,30108.0,159185.0
+Rupsi,Rupsi Airport,NAN,VERU,Domestic,Yes,AAI,Assam,RCS-UDAN,0.0,0.0,,,,,,0.0,159185.0
+Silchar,Silchar Airport,IXS,VEKU,Domestic (CE),Yes,MoD and AAI,Assam,Krishi-Udan,24.9129009247,92.9786987305, Industrial,Mini Hub,316178.0,399006.0,412654.0,483464.0,159185.0
+Tezpur,Tezpur Airport,TEZ,VETZ,Domestic (CE),Yes,MoD and AAI,Assam,RCS-UDAN & Krishi-Udan,26.7091007232666,92.78469848632812,,,4896.0,4024.0,32273.0,27944.0,159185.0
+Darbhanga,Darbhanga Airport,DBR,VEDH,Domestic (CE),Yes,MoD and AAI,Bihar,RCS-UDAN & Krishi-Udan,26.192801,85.916901, Pilgrimage,Mini Hub,619948.0,614114.0,526066.0,523173.0,69321.0
+Gaya,Gaya Airport,GAY,VEGY,Customs,Yes,AAI,Bihar,,24.744301,84.951202,,,47311.0,229460.0,320295.0,329304.0,69321.0
+Patna,Jay Prakash Narayan Airport,PAT,VEPT,Customs,Yes,AAI,Bihar,Krishi-Udan,25.591299,85.087997,,,2967681.0,3748635.0,3440450.0,3819477.0,69321.0
+Chandigarh,Shaheed Bhagat Singh International Airport,IXC,VICG,Customs,Yes,CHIAL,Chandigarh,Krishi-Udan,30.6735,76.788498, Industrial,Mini Hub,2289169.0,3677786.0,3721229.0,4149840.0,492903.9084
+Ambikapur,Ambikapur Airport,AHA,VEAP,Domestic,Yes,State Government,Chhattisgarh,RCS-UDAN,22.98753,83.19612,,,0.0,0.0,0.0,922.0,162870.0
+Bilaspur,Bilasa Devi Kevat Airport,PAB,VEBU,Domestic,Yes,State Government,Chhattisgarh,RCS-UDAN,21.9884,82.111,,,25356.0,39570.0,31083.0,36850.0,162870.0
+Jagdalpur,Jagdalpur Airport,JGB,VEJR,State/Private,Yes,State Government,Chhattisgarh,RCS-UDAN,19.074301,82.036797,,,46519.0,64984.0,55019.0,74407.0,162870.0
+Raipur,Swami Vivekananda Airport,RPR,VERP,Domestic,Yes,AAI,Chhattisgarh,Krishi-Udan,21.180401,81.7388, Industrial,Mini Hub,1407157.0,2251998.0,2432118.0,2572031.0,162870.0
+Diu,Diu Airport,DIU,VADU,Domestic,Yes,AAI,Dadra and Nagar Haveli & Daman and Diu,RCS-UDAN,20.714185,70.921855,,,31860.0,40109.0,66252.0,104218.0,0.0
+Delhi,"Indira Gandhi International Airport, New Delhi",DEL,VIDP,International,Yes,DIAL,Delhi,,28.55563,77.09519,,,,,,0.0,493024.0
+Delhi Ncr,"Safdarjung Airport, New Delhi",NAN,VIDD,State / Private,Yes,AAI,Delhi,,0.0,0.0,,,39339998.0,65327833.0,73673708.0,79259890.0,493024.0
+Ghaziabad,"Hindon Airport, Ghaziabad",HDO,VIDX,Domestic (CE),Yes,MoD and AAI,Delhi,,28.707701,77.358902,,,,,,0.0,493024.0
+Dabolim,Dabolim Airport,GOI,VOGO,International (CE),Yes,MoD and AAI,Goa,Krishi-Udan,15.380062,73.833328, Leisure,Mini Hub,5238051.0,8359393.0,6872411.0,7260779.0,636925.9353
+Mopa,Manohar International Airport,GOX,VOGA,International,Yes,GMR Group,Goa,,15.744257,73.860625, Leisure,Mini Hub,0.0,664160.0,4406087.0,4643852.0,636925.9353
+Ahmedabad,Sardar Vallabhbhai Patel International Airport,AMD,VAAH,International,Yes,Adani Group,Gujarat,,23.0772,72.634697,,,5670896.0,10137001.0,11696227.0,13427697.0,330724.5168
+Bhavnagar,Bhavnagar Airport,BHU,VABV,Domestic,Yes,AAI,Gujarat,RCS-UDAN,21.752199173,72.1852035522,,,34442.0,60970.0,73473.0,74503.0,330724.5168
+Bhuj,Bhuj Airport,BHJ,VABJ,Domestic (CE),Yes,MoD and AAI,Gujarat,Krishi-Udan,23.2877998352,69.6701965332,,,17840.0,45755.0,66652.0,186403.0,330724.5168
+Jamnagar,Jamnagar Airport,JGA,VAJM,Domestic (CE),Yes,MoD and AAI,Gujarat,RCS-UDAN & Krishi-Udan,22.465499877929688,70.01260375976562,,,61668.0,122215.0,169485.0,169099.0,330724.5168
+Junagadh,Keshod Airport,IXK,VAKS,Domestic,Yes,AAI,Gujarat,RCS-UDAN,21.317101,70.270401,,,0.0,13324.0,13885.0,19322.0,330724.5168
+Kandla,Kandla Airport,IXY,VAKE,Domestic,Yes,AAI,Gujarat,RCS-UDAN,23.1127,70.100304,,,92445.0,77718.0,80517.0,48408.0,330724.5168
+Mundra,Mundra Airport,NAN,VAMA,State/Private,Yes,Adani Group,Gujarat,RCS-UDAN,0.0,0.0,,,279.0,189.0,1770.0,5080.0,330724.5168
+Porbandar,Porbandar Airport,PBD,VAPR,Domestic,Yes,AAI,Gujarat,RCS-UDAN,21.649524,69.656405,,,14790.0,18841.0,2537.0,694.0,330724.5168
+Rajkot,Rajkot International Airport,HSR,VAHS,International,Yes,AAI,Gujarat,Krishi-Udan,22.378824,71.039391, Industrial,Mini Hub,0.0,0.0,525668.0,1088570.0,330724.5168
+Rajkot - Domestic,Rajkot Airport,RAJ,VARK,Domestic,Yes,AAI,Gujarat,Krishi-Udan,22.3092,70.779503, Industrial,Mini Hub,,,,0.0,330724.5168
+Surat,Surat International Airport[8],STV,VASU,International,Yes,AAI,Gujarat,,21.115531,72.743251, Industrial,Mini Hub,0.0,0.0,1380752.0,1724821.0,330724.5168
+Vadodara,Vadodara Airport,BDQ,VABO,Customs,Yes,AAI,Gujarat,,22.336201,73.226303, Industrial,Mini Hub,575690.0,1088990.0,0.0,0.0,330724.5168
+Hisar,Maharaja Agrasen International Airport,HSS,VIHR,International,Yes,"Civil Aviation Department, Haryana and Haryana Institute of Civil Aviation",Haryana,RCS-UDAN,29.186065,75.74142,,,271.0,128.0,35.0,0.0,353182.0
+Kangra,Kangra Airport,DHM,VIGG,Domestic,Yes,AAI,Himachal Pardesh,Krishi-Udan,32.164902,76.263018,,,129995.0,176247.0,201391.0,209834.0,0.0
+Kullu-Manali,KulluManali Airport,KUU,VIBR,Domestic,Yes,AAI,Himachal Pardesh,RCS-UDAN & Krishi-Udan,31.876699,77.154404,,,17638.0,17539.0,16890.0,29649.0,0.0
+Shimla,Shimla Airport,SLV,VISM,Domestic,Yes,AAI,Himachal Pardesh,RCS-UDAN & Krishi-Udan,31.0818,77.068001,,,1894.0,11325.0,19778.0,25493.0,0.0
+Jammu,Jammu Airport,IXJ,VIJU,Domestic (CE),Yes,MoD and AAI,Jammu and Kashmir,Krishi-Udan,32.688849,74.838152, Pilgrimage,Mini Hub,1273288.0,1579519.0,1456567.0,1614167.0,0.0
+Srinagar,Srinagar Airport,SXR,VISR,Domestic (CE),Yes,MoD and AAI,Jammu and Kashmir,Krishi-Udan,33.987099,74.7742, Leisure,Mini Hub,3158400.0,4409665.0,4205541.0,4472449.0,0.0
+Chakulia,Chakulia Airport,NAN,VECK,Domestic,No,AAI,Jharkhand,RCS-UDAN,0.0,0.0,,,,,,0.0,116663.0
+Deoghar,Deoghar Airport,DGH,VEDO,Domestic,Yes,AAI and State Government,Jharkhand,RCS-UDAN,24.446842,86.704955,,,0.0,76430.0,163012.0,281442.0,116663.0
+Jamshedpur,Sonari Airport,IXW,VEJS,Domestic,Yes,Tata Steel,Jharkhand,RCS-UDAN,22.813706,86.168981,,,0.0,4403.0,9939.0,9553.0,116663.0
+Ranchi,Birsa Munda Airport,IXR,VERC,Domestic,Yes,AAI,Jharkhand,Krishi-Udan,23.314300537100003,85.3217010498, Industrial,Mini Hub,1723237.0,2417774.0,2577406.0,2569371.0,116663.0
+Belagavi,Belagavi Airport,IXG,VOBM,Domestic,Yes,AAI,Karnataka,RCS-UDAN & Krishi-Udan,15.8593,74.618301,,,280016.0,297905.0,312447.0,340295.0,380906.0
+Bengaluru,Kempegowda International Airport,BLR,VOBL,International,Yes,BIAL,Karnataka,,13.1979,77.706299,,,16287097.0,31911429.0,37528533.0,41875620.0,380906.0
+Bengaluru Aerodome,Jakkur Aerodrome,NAN,VOJK,State/Private,No,State Government,Karnataka,,0.0,0.0,,,,,,0.0,380906.0
+Bidar,Bidar Airport,IXX,VOBR,Domestic (CE),Yes,MoD & GMR Group,Karnataka,RCS-UDAN,17.9081,77.487099,,,4038.0,10140.0,16507.0,16.0,380906.0
+Hubli,Hubli Airport,HBX,VOHB,Domestic,Yes,AAI,Karnataka,RCS-UDAN,15.361084,75.082096, Industrial,Mini Hub,188342.0,322701.0,358835.0,346405.0,380906.0
+Kalaburagi,Kalaburagi Airport,GBI,VOGB,Domestic,Yes,AAI,Karnataka,RCS-UDAN,17.308154,76.965246,,,86370.0,79143.0,54862.0,30924.0,380906.0
+Mangaluru,Mangaluru International Airport,IXE,VOML,International,Yes,AAI & Adani Group,Karnataka,,12.95542,74.884934, Industrial,Mini Hub,1013453.0,1809266.0,2030387.0,2343032.0,380906.0
+Mysuru,Mysuru Airport,MYQ,VOMY,Domestic,Yes,AAI,Karnataka,RCS-UDAN,12.229751,76.653683,,,104406.0,188296.0,127994.0,94891.0,380906.0
+Shivamogga,Rashtrakavi Kuvempu Airport,RQY,VOSH,Domestic,Yes,State Government,Karnataka,RCS-UDAN,13.858024,75.618868,,,0.0,0.0,39040.0,117450.0,380906.0
+Vidyanagar,Vidyanagar Airport (JSW),VDY,VOBG,Domestic,Yes,State Government,Karnataka,,15.175921,76.63303,,,,,,0.0,380906.0
+Kannur,Kannur International Airport,CNN,VOKN,International,Yes,KIAL,Kerala,RCS-UDAN,11.916343,75.544979, Leisure,Mini Hub,799122.0,1257086.0,1177891.0,1344021.0,308338.0
+Kochi / Thrissur,Cochin International Airport,COK,VOCI,International,Yes,CIAL,Kerala,,10.151047,76.400838,,,0.0,0.0,10365655.0,11140778.0,308338.0
+Kozhikode / Malappuram,Kozhikode International Airport,CCJ,VOCL,International,Yes,AAI,Kerala,,11.135996,75.955152,,,1665145.0,2982879.0,3320250.0,3695944.0,308338.0
+Thiruvananthapuram / Kollam,Thiruvananthapuram International Airport,TRV,VOTV,International,Yes,Adani Group,Kerala,Krishi-Udan,8.481889,76.920029,,,1655506.0,3478067.0,4405318.0,4891009.0,308338.0
+Leh,Kushok Bakula Rimpochee Airport,IXL,VILH,Domestic (CE),Yes,MoD and AAI,Ladakh,Krishi-Udan,34.135899,77.546501, Leisure,Mini Hub,1050714.0,1260725.0,1074426.0,1194892.0,263443.262
+Agatti Island,Agatti Airport,AGX,VOAT,Domestic,Yes,AAI,Lakshadweep,RCS-UDAN & Krishi-Udan,10.8237,72.176003,,,34896.0,48485.0,47266.0,117409.0,0.0
+Bhopal,Raja Bhoj Airport,BHO,VABP,Customs,Yes,AAI,Madhya Pardesh,Krishi-Udan,23.2875,77.337402, Industrial,Mini Hub,733236.0,1135781.0,0.0,0.0,0.0
+Datia,Datia Airport,DPP,,Domestic,Yes,AAI,Madhya Pardesh,RCS-UDAN,0.0,0.0,,,0.0,0.0,0.0,0.0,0.0
+Gwalior,Rajmata Vijaya Raje Scindia Airport,GWL,VIGR,Domestic (CE),Yes,MoD and AAI,Madhya Pardesh,RCS-UDAN,26.29330062866211,78.22779846191406,,,173900.0,218245.0,275397.0,334729.0,0.0
+Indore,Devi Ahilyabai Holkar International Airport,IDR,VAID,International,Yes,AAI,Madhya Pardesh,Krishi-Udan,22.721404,75.80051, Industrial,Mini Hub,1629668.0,2828587.0,3464831.0,3759411.0,0.0
+Jabalpur,Jabalpur Airport,JLR,VAJB,Domestic,Yes,AAI,Madhya Pardesh,Krishi-Udan,23.177799,80.052002,,,294356.0,431724.0,328031.0,392869.0,0.0
+Khajuraho,Khajuraho Airport,HJR,VAKJ,Domestic,Yes,AAI,Madhya Pardesh,,24.8172,79.918602,,,1676.0,25973.0,54484.0,67711.0,0.0
+Rewa,Rewa Airport,REW,VA1G,Domestic,Yes,AAI,Madhya Pardesh,RCS-UDAN,24.503401,81.220299,,,0.0,0.0,0.0,1877.0,0.0
+Dewangna,Dewangna Airport,NAN,VA1G,Domestic,Yes,AAI,Madhya Pradesh,RCS-UDAN,0.0,0.0,,,,,,0.0,152615.0
+Amravati,Amravati Airport,AVR,VAAM,Domestic,Yes,MADC,Maharashtra,RCS-UDAN,0.0,0.0,,,0.0,0.0,0.0,0.0,309340.0
+Aurangabad,Aurangabad Airport,IXU,VAAU,Customs,Yes,AAI,Maharashtra,,19.862875,75.396312, Industrial,Mini Hub,250989.0,468486.0,623915.0,700402.0,309340.0
+Gondia,Gondia Airport,GDB,VAGD,Domestic,Yes,AAI,Maharashtra,RCS-UDAN,21.526817,80.290347,,,1774.0,10707.0,8077.0,32116.0,309340.0
+Jalgaon,Jalgaon Airport,JLG,VAJL,Domestic,Yes,AAI,Maharashtra,RCS-UDAN,20.962678,75.627492,,,7604.0,355.0,552.0,92470.0,309340.0
+Kolhapur,Chhatrapati Rajaram Maharaj Airport,KLH,VAKP,Domestic,Yes,AAI,Maharashtra,RCS-UDAN,16.6647,74.289398,,,96319.0,128728.0,160200.0,158966.0,309340.0
+Mumbai,Chhatrapati Shivaji Maharaj International Airport,BOM,VABB,International,Yes,MIAL,Maharashtra,,19.088699,72.867897,,,21747892.0,43930298.0,52820754.0,55122422.0,309340.0
+Nagpur,Dr. Babasaheb Ambedkar International Airport,NAG,VANP,International,Yes,"GMR Group, MADC & AAI",Maharashtra,,21.092199,79.047203, Industrial,Mini Hub,1605433.0,2565155.0,2794427.0,2894099.0,309340.0
+Nanded,Shri Guru Gobind Singh Ji Airport,NDC,VAND,State/Private,Yes,State Government,Maharashtra,RCS-UDAN,19.1833,77.316704,,,19738.0,462.0,1067.0,130208.0,309340.0
+Nashik,Nashik International Airport,ISK,VAOZ,International,Yes,HAL,Maharashtra,RCS-UDAN & Krishi-Udan,20.119101,73.912903,,,51789.0,107772.0,242372.0,341112.0,309340.0
+Pune,Pune Airport,PNQ,VAPO,International (CE),Yes,MoD & AAI,Maharashtra,Krishi-Udan,18.5821,73.919701,,,3713491.0,8007160.0,9525484.0,10457694.0,309340.0
+Shirdi,Shirdi Airport,SAG,VASD,International,Yes,MADC,Maharashtra,,19.689211,74.373655,,,176787.0,733038.0,724980.0,741540.0,309340.0
+Sindhudurg,Sindhudurg Airport,SDW,VOSR,State/Private,Yes,State Government,Maharashtra,RCS-UDAN,16.002552,73.529846,,,19569.0,28014.0,17618.0,14649.0,309340.0
+Solapur,Solapur Airport,SSE,VASL,Domestic,Yes,AAI,Maharashtra,,17.6280002594,75.93479919430001,,,23.0,219.0,422.0,0.0,309340.0
+Imphal,Bir Tikendrajit International Airport,IMF,VEIM,International,Yes,AAI,Manipur,Krishi-Udan,24.76,93.896698, Leisure,Mini Hub,814913.0,1233997.0,1274666.0,1406227.0,130371.5875
+Shillong,Shillong Airport (Umroi),SHL,VEBI,Domestic,Yes,AAI,Meghalaya,RCS-UDAN,25.70359992980957,91.97869873046876, Leisure,Mini Hub,,,,0.0,157141.0
+Aizawl,Lengpui Airport,AJL,VELP,State/Private,Yes,State Government,Mizoram,Krishi-Udan,23.840599,92.619698, Leisure,Mini Hub,190462.0,357639.0,398667.0,493465.0,255438.6565
+Dimapur,Dimapur Airport,DMU,VEMR,Domestic,Yes,AAI,Nagaland,RCS-UDAN & Krishi-Udan,25.8838996887,93.7711029053,,,206519.0,295361.0,319590.0,336870.0,168296.7213
+Bhubaneswar,Biju Patnaik International Airport,BBI,VEBS,International,Yes,AAI,Odisha,,20.251021,85.814747, Industrial,Mini Hub,2135893.0,3624905.0,4600615.0,4838751.0,168966.0
+Jeypore,Jeypore Airport,PYB,VEJP,Domestic,Yes,AAI,Odisha,RCS-UDAN,18.879549,82.552478,,,0.0,4584.0,10865.0,12306.0,168966.0
+Jharsuguda,Veer Surendra Sai Airport,JRG,VEJH,Domestic,Yes,AAI,Odisha,RCS-UDAN & Krishi-Udan,21.9135,84.0504,,,263277.0,232564.0,234331.0,313381.0,168966.0
+Rourkela,Rourkela Airport,RRK,VERK,Domestic,Yes,AAI and SAIL,Odisha,RCS-UDAN,22.256571,84.815193,,,0.0,9057.0,26750.0,44564.0,168966.0
+Utkela,Utkela Airport,UKE,VEUK,Domestic,Yes,State Government,Odisha,RCS-UDAN,20.097778,83.183333,,,0.0,0.0,1155.0,2877.0,168966.0
+Puducherry,Pondicherry Airport,PNY,VOPC,Domestic,Yes,AAI,Puducherry,RCS-UDAN,11.968,79.812,,,1012.0,75870.0,45441.0,34190.0,281478.0
+Amritsar,Sri Guru Ram Dass Jee International Airport,ATQ,VIAR,International,Yes,AAI,Punjab,Krishi-Udan,31.7096,74.797302, Pilgrimage,Mini Hub,1382004.0,2516518.0,3085598.0,3542880.0,221197.0
+Bathinda,Bathinda Airport,BUP,VIBT,Domestic (CE),Yes,MoD and AAI,Punjab,RCS-UDAN,30.2701,74.755798,,,162.0,146.0,8772.0,31004.0,221197.0
+Beas - Amritsar,Beas Airport,NAN,VIBS,State/Private,Yes,Beas Spectruin Aero,Punjab,,0.0,0.0, Pilgrimage,Mini Hub,,,,0.0,221197.0
+Jalandhar,Adampur Airport,AIP,VIAX,Domestic (CE),Yes,MoD and AAI,Punjab,RCS-UDAN & Krishi-Udan,31.4338,75.758797,,,1955.0,0.0,536.0,35220.0,221197.0
+Ludhiana,Ludhiana Airport,LUH,VILD,Domestic,Yes,AAI and State Government,Punjab,RCS-UDAN,30.854700088500977,75.95259857177734,,,321.0,197.0,987.0,2003.0,221197.0
+Pathankot,Pathankot Airport,IXP,VIPK,Domestic (CE),No,MoD and AAI,Punjab,RCS-UDAN & Krishi-Udan,32.233611,75.634444,,,10705.0,109.0,0.0,0.0,221197.0
+Ajmer,Kishangarh Airport,IXD,VIKG,Domestic,Yes,AAI,Rajasthan,Krishi-Udan,25.4401,81.733902,,,,,,0.0,185053.0
+Bikaner,Bikaner Airport,BKB,VIBK,Domestic (CE),Yes,MoD and AAI,Rajasthan,RCS-UDAN,28.070601,73.207199,,,16183.0,21288.0,4694.0,13714.0,185053.0
+Jaipur,Jaipur International Airport,JAI,VIJP,International,Yes,Adani Group,Rajasthan,,26.8242,75.812202,,,2943171.0,4764382.0,5466552.0,6057249.0,185053.0
+Jaisalmer,Jaisalmer Airport,JSA,VIJR,Domestic (CE),Yes,MoD and AAI,Rajasthan,RCS-UDAN & Krishi-Udan,26.8887,70.864998,,,90343.0,99468.0,135529.0,120714.0,185053.0
+Jodhpur,Jodhpur Airport,JDH,VIJO,Domestic (CE),Yes,MoD and AAI,Rajasthan,Krishi-Udan,26.251100540161133,73.04889678955078, Leisure,Mini Hub,768227.0,899403.0,1091127.0,1041817.0,185053.0
+Kankroli,Kankroli Airstrip,NAN,,State/Private,No,State Government,Rajasthan,,0.0,0.0,,,138981.0,58709.0,40864.0,86361.0,185053.0
+Kota,Kota Airport,KTU,VIKO,Domestic,No,AAI,Rajasthan,,25.160200119,75.84559631350001,,,117.0,192.0,279.0,292.0,185053.0
+Udaipur,Maharana Pratap Airport,UDR,VAUD,Domestic,Yes,AAI,Rajasthan,,24.6177005768,73.89610290530001, Leisure,Mini Hub,917938.0,1355215.0,1503535.0,1650607.0,185053.0
+Uttarlai,Uttarlai Air Force Station,NAN,VIUT,Military,Yes,IAF,Rajasthan,,0.0,0.0,,,,,,0.0,185053.0
+Gangtok,Pakyong Airport,PYG,VEPY,Domestic,Yes,AAI,Sikkim,RCS-UDAN & Krishi-Udan,27.2313,88.587196,,,44740.0,15707.0,8417.0,11111.0,638871.6501
+Chennai,Chennai International Airport,MAA,VOMM,International,Yes,AAI,Tamil Nadu,,12.990005,80.169296,,,9533301.0,18571393.0,21207262.0,22411290.0,361619.0
+Coimbatore,Coimbatore International Airport,CJB,VOCB,International,Yes,AAI,Tamil Nadu,Krishi-Udan,11.03,77.043404, Industrial,Mini Hub,1285922.0,2557263.0,2904611.0,3253190.0,361619.0
+Madurai,Madurai Airport,IXM,VOMD,Custom,Yes,AAI,Tamil Nadu,,9.83450984955,78.09339904790001, Pilgrimage,Mini Hub,679781.0,1138005.0,1285976.0,1399046.0,361619.0
+Salem,Salem Airport,SXV,VOSM,Domestic,Yes,AAI,Tamil Nadu,RCS-UDAN,11.78330039978,78.06559753418,,,2577.0,318.0,42568.0,130132.0,361619.0
+Thoothukkudi,Tuticorin Airport,TCR,VOTK,Domestic,Yes,AAI,Tamil Nadu,,8.724241,78.025803,,,135363.0,202642.0,199761.0,230151.0,361619.0
+Tiruchirappalli,Tiruchirappalli International Airport,TRZ,VOTR,International,Yes,AAI,Tamil Nadu,Krishi-Udan,10.762915,78.717741, Pilgrimage,Mini Hub,556707.0,1514260.0,1763942.0,1956851.0,361619.0
+Begumpet,Begumpet Airport,BPM,VOHY,Domestic,Yes,State Government,Telangana,,17.4531,78.467598,,,,,,0.0,387623.0
+Hyderabad,Rajiv Gandhi International Airport,HYD,VOHS,International,Yes,GMR group,Telangana,,17.231318,78.429855,,,3133.0,1938.0,8064.0,15840.0,387623.0
+Agartala,Maharaja Bir Bikram Airport,IXA,VEAT,Customs,Yes,AAI,Tripura,Krishi-Udan,23.886999,91.240402, Leisure,Mini Hub,901206.0,1386087.0,0.0,0.0,192842.0
+Agra,Agra Airport,AGR,VIAG,Domestic (CE),Yes,MoD and AAI,Uttar Pradesh,RCS-UDAN & Krishi-Udan,27.157975,77.961025,,,72831.0,131643.0,182958.0,168362.0,108572.0
+Aligarh,Aligarh Airport,HRH,VIAH,Domestic,Yes,AAI and State Government,Uttar Pradesh,RCS-UDAN,27.861437,78.145404,,,0.0,0.0,0.0,1239.0,108572.0
+Ayodhya,Maharishi Valmiki International Airport[11],AYJ,VEAY,International,Yes,AAI,Uttar Pradesh,,26.747736,82.163664,,,0.0,0.0,213015.0,1115016.0,108572.0
+Azamgarh,Azamgarh Airport,NAN,VEAH,Domestic,Yes,AAI and State Government,Uttar Pradesh,RCS-UDAN,0.0,0.0,,,0.0,0.0,0.0,956.0,108572.0
+Bareilly,Bareilly Airport,BEK,VIBY,Domestic (CE),Yes,MoD and AAI,Uttar Pradesh,RCS-UDAN & Krishi-Udan,28.4221,79.450798,,,103667.0,142102.0,128566.0,121746.0,108572.0
+Gorakhpur,Gorakhpur Airport,GOP,VEGK,Domestic (CE),Yes,MoD and AAI,Uttar Pradesh,Krishi-Udan,26.7397003174,83.4496994019, Pilgrimage,Mini Hub,602820.0,717819.0,680203.0,867994.0,108572.0
+Kanpur,Kanpur Airport,KNU,VIKA,Domestic (CE),Yes,MoD and AAI,Uttar Pradesh,RCS-UDAN & Krishi-Udan,26.404301,80.410103, Industrial,Mini Hub,175268.0,254903.0,284314.0,322252.0,108572.0
+Kushinagar,Kushinagar International Airport,KBK,VEKI,International,Yes,AAI,Uttar Pradesh,RCS-UDAN,26.776534,83.889214,,,11155.0,23221.0,17742.0,270.0,108572.0
+Lucknow,Chaudhary Charan Singh International Airport,LKO,VILK,International,Yes,Adani Group,Uttar Pradesh,,26.760599,80.889297,,,3303960.0,5220528.0,6184850.0,6438506.0,108572.0
+Moradabad,Moradabad Airport,NAN,,Domestic,Yes,AAI,Uttar Pradesh,RCS-UDAN,0.0,0.0,,,0.0,0.0,0.0,572.0,108572.0
+Prayagraj,Prayagraj Airport,IXD,VEAB,Domestic (CE),Yes,MoD and AAI,Uttar Pradesh,RCS-UDAN & Krishi-Udan,25.4401,81.733902, Pilgrimage,Mini Hub,441006.0,571067.0,610707.0,1077393.0,108572.0
+Shravasti,Shravasti Airport,NAN,VISV,Domestic,Yes,AAI and State Government,Uttar Pradesh,RCS-UDAN,0.0,0.0,,,0.0,0.0,0.0,685.0,108572.0
+Varanasi,Lal Bahadur Shastri International Airport,VNS,VEBN,International,Yes,AAI,Uttar Pradesh,Krishi-Udan,25.452171,82.862549, Pilgrimage,Mini Hub,1708220.0,2521442.0,2996698.0,4027810.0,108572.0
+Dehradun,Jolly Grant Airport,DED,VIDN,Domestic,Yes,AAI,Uttarakhand,Krishi-Udan,30.189243,78.176651, Leisure,Mini Hub,917949.0,1595977.0,1598297.0,1724978.0,274064.0
+Pantnagar,Pantnagar Airport,PGH,VIPT,Domestic,Yes,AAI,Uttarakhand,RCS-UDAN & Krishi-Udan,29.0334,79.473701,,,17666.0,71136.0,110824.0,101013.0,274064.0
+Pithoragarh,Naini-Saini Airport,NNS,VIDF,Domestic,Yes,State Government,Uttarakhand,RCS-UDAN & Krishi-Udan,0.0,0.0,,,532.0,404.0,1733.0,16263.0,274064.0
+Cooch Behar,Cooch Behar Airport,COH,VECO,Domestic,Yes,AAI,West Bengal,RCS-UDAN,26.3305,89.467201,,,7.0,394.0,4384.0,5478.0,163467.0
+Durgapur,Kazi Nazrul Islam Airport,RDP,VEDG,Domestic,Yes,BAPL and AAI,West Bengal,RCS-UDAN,23.6225,87.243, Industrial,Mini Hub,249975.0,492020.0,514760.0,513488.0,163467.0
+Kolkata,Behala Airport,NAN,VEBA,Domestic,Yes,AAI,West Bengal,Krishi-Udan,0.0,0.0,,,11036108.0,17768862.0,19784417.0,21831118.0,163467.0
+Siliguri,Bagdogra International Airport,IXB,VEBD,Customs,Yes,MoD & AAI,West Bengal,Krishi-Udan,26.6812,88.328598, Leisure,Mini Hub,1980049.0,2555305.0,3118368.0,3219410.0,163467.0

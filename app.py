@@ -8,7 +8,7 @@ from math import radians, cos, sin, asin, sqrt
 
 app = Flask(__name__)
 
-# --- DATA LOADING ENGINE ---
+# --- DATA LOADING ENGINE (BULLETPROOF CLEANING) ---
 def load_data():
     data = {}
     def clean_name(name):
@@ -27,12 +27,13 @@ def load_data():
     try:
         df = pd.read_csv("Master_Airports.csv")
         
-        # 1. Clean Coordinates Safely (Without Regex)
+        # Clean Coordinates Safely
         for c in ['Latitude', 'Longitude']:
             if c in df.columns:
-                df[c] = pd.to_numeric(df[c], errors='coerce').fillna(0)
+                df[c] = df[c].astype(str).str.replace(r'[^\d.-]', '', regex=True)
+                df[c] = pd.to_numeric(df[c], errors='coerce').fillna(0.0)
                 
-        # 2. Clean Financials Aggressively (To fix Delhi/Mopa)
+        # Clean Financials Aggressively to protect Delhi/Mopa massive numbers
         for c in ['2025', 'Per Capita Income']: 
             if c in df.columns: 
                 df[c] = df[c].astype(str).str.replace(r'[^\d.]', '', regex=True)
@@ -137,7 +138,7 @@ def analyze_resilience():
     
     return jsonify({"insight": insight, "color": color, "chart": pio.to_json(fig)})
 
-# --- API: EXPANSION SCOUT (FIXED JAVASCRIPT RENDERING) ---
+# --- API: EXPANSION SCOUT (DELHI/MOPA FLIP + BULLETPROOF MAP) ---
 @app.route('/api/expansion', methods=['POST'])
 def analyze_expansion():
     w = float(request.json.get('weight', 0.7))
@@ -160,18 +161,14 @@ def analyze_expansion():
     reason = "It represents a massive, established high-traffic market." if w < 0.5 else "It possesses exceptional ticket-paying capacity."
     insight = f"🏆 <b>Top Target:</b> {winner['Area served']} ({winner['State']}). {reason}"
     
-    # Filter out missing coordinates
-    map_df = top[top['Latitude'] != 0].head(20)
+    # Filter out missing coordinates for the map
+    map_df = top[top['Latitude'] != 0.0].head(20)
     
-    # ----------------------------------------------------------------------
-    # THE FIX: Convert Pandas Series to purely flat Python Lists for JavaScript
-    # ----------------------------------------------------------------------
+    # Convert Pandas Series to pure Python Lists to prevent JSON/Plotly rendering bugs
     lats = map_df['Latitude'].tolist()
     lons = map_df['Longitude'].tolist()
-    bubble_sizes = ((map_df['Score'] * 25) + 12).tolist() # Set visual size
+    bubble_sizes = ((map_df['Score'] * 25) + 12).tolist() 
     bubble_colors = map_df['Score'].tolist()
-    
-    # Create the hover text
     hover_texts = (map_df['Area served'] + "<br>Score: " + (map_df['Score']*100).round(1).astype(str) + "%").tolist()
     
     fig = go.Figure(go.Scattermapbox(
@@ -191,9 +188,8 @@ def analyze_expansion():
     fig.update_layout(
         mapbox_style="carto-positron",
         margin={"r":0,"t":0,"l":0,"b":0},
-        mapbox=dict(zoom=3.8, center=dict(lat=22.0, lon=79.0)) # Hardcoded map center over India
+        mapbox=dict(zoom=3.8, center=dict(lat=22.0, lon=79.0)) 
     )
-    # ----------------------------------------------------------------------
 
     table_df = top[['Area served', 'State', 'Per Capita Income', 'Score']].head(5).copy()
     table_df = table_df.rename(columns={'Area served': 'Target City', 'Per Capita Income': 'Avg. Income', 'Score': 'Opportunity Score'})
@@ -204,7 +200,7 @@ def analyze_expansion():
     
     return jsonify({"insight": insight, "map_data": pio.to_json(fig), "table": table_html})
 
-# --- API: YATRA CONNECT ---
+# --- API: YATRA CONNECT (SHORTEST PATH OPTIMIZATION) ---
 @app.route('/api/analyze_circuit', methods=['POST'])
 def analyze_circuit():
     data = request.json
@@ -213,11 +209,32 @@ def analyze_circuit():
 
     h_r = df[df['Area served'] == h].iloc[0]
     p_r = df[df['Area served'] == p].iloc[0]
-    others = [x for x in df['Area served'].unique() if x not in [h, p]]
-    c_name = np.random.choice(others) if others else "Unknown"
+    
+    # Calculate distance for Leg 1
+    d1 = get_dist(h, p, h_r['Latitude'], h_r['Longitude'], p_r['Latitude'], p_r['Longitude'])
+    
+    best_city = "Unknown"
+    shortest_circuit_dist = float('inf')
+    
+    # LOOP OPTIMIZATION: Find the mathematically shortest triangular circuit
+    for index, row in df.iterrows():
+        c_candidate = row['Area served']
+        if c_candidate in [h, p] or row['Latitude'] == 0.0: 
+            continue 
+            
+        d2_temp = get_dist(p, c_candidate, p_r['Latitude'], p_r['Longitude'], row['Latitude'], row['Longitude'])
+        d3_temp = get_dist(c_candidate, h, row['Latitude'], row['Longitude'], h_r['Latitude'], h_r['Longitude'])
+        
+        total_d = d1 + d2_temp + d3_temp
+        
+        if total_d < shortest_circuit_dist:
+            shortest_circuit_dist = total_d
+            best_city = c_candidate
+
+    c_name = best_city if best_city != "Unknown" else df.iloc[0]['Area served']
     c_r = df[df['Area served'] == c_name].iloc[0]
     
-    d1 = get_dist(h, p, h_r['Latitude'], h_r['Longitude'], p_r['Latitude'], p_r['Longitude'])
+    # Final distances for the winning route
     d2 = get_dist(p, c_name, p_r['Latitude'], p_r['Longitude'], c_r['Latitude'], c_r['Longitude'])
     d3 = get_dist(c_name, h, c_r['Latitude'], c_r['Longitude'], h_r['Latitude'], h_r['Longitude'])
     total_dist = d1 + d2 + d3
